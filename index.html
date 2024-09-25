@@ -513,81 +513,90 @@
         </div>
       </div>
     </footer>
+
     <div class="modal-overlay is-open">
       <div class="modal">
-        <button class="button-close-modal">
+        <button class="button-close-modal" type="button">
           <svg class="button-close-icon" height="8" width="8">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="feedback">
-          <div class="input-name">
-            <label for="username">Name</label>
-            <div class="input-info">
-              <input type="text" name="username" id="username" /><svg
-                class="form-icons"
-                height="18"
-                width="18"
-              >
+          <div class="feedback-input-field">
+            <label class="feedback-input-label" for="username">Name</label>
+            <div class="feedback-input-info">
+              <input
+                class="feedback-input"
+                type="text"
+                name="username"
+                id="username"
+                required
+              /><svg class="form-icons" height="18" width="18">
                 <use href="./images/icons.svg#icon-person-black"></use>
               </svg>
             </div>
           </div>
-          <div class="input-tel">
-            <label for="user-phone">Phone</label>
-            <div class="input-info">
-              <input type="tel" name="usertel" id="user-phone" /><svg
-                class="form-icons"
-                height="18"
-                width="24"
-              >
+          <div class="feedback-input-field">
+            <label class="feedback-input-label" for="user-phone">Phone</label>
+            <div class="feedback-input-info">
+              <input
+                class="feedback-input"
+                type="tel"
+                name="usertel"
+                id="user-phone"
+              /><svg class="form-icons" height="18" width="24">
                 <use href="./images/icons.svg#icon-phone-black"></use>
               </svg>
             </div>
           </div>
-          <div class="input-email">
-            <label for="user-email">Email</label>
-            <div class="input-info">
-              <input type="email" name="useremail" id="user-email" /><svg
-                class="form-icons"
-                height="18"
-                width="24"
-              >
+          <div class="feedback-input-field">
+            <label class="feedback-input-label" for="user-email">Email</label>
+            <div class="feedback-input-info">
+              <input
+                class="feedback-input"
+                type="email"
+                name="useremail"
+                id="user-email"
+              /><svg class="form-icons" height="18" width="24">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
             </div>
           </div>
-          <div class="input-comment">
-            <label for="user-comment">Comment</label>
+          <div class="feedback-input-field">
+            <label class="feedback-input-label" for="user-comment"
+              >Comment</label
+            >
             <textarea
+              class="feedback-comment"
               name="user-comment"
               id="user-comment"
               placeholder="Text input"
-              rows="5"
-            ></textarea>
-          </div>
-        </form>
-        <div class="acception-part">
-          <input
-            type="checkbox"
-            name="acception"
-            id="user-accept"
-            value="yes"
-          />
-          <label for="user-accept"
-            ><span class="acception-span"
-              ><svg class="acception-icon" width="10" height="8">
-                <use href="./images/icons.svg#icon-click"></use></svg
-            ></span>
-            I accept the terms and conditions of the &nbsp;<a
-              class="privacy-link"
-              href=""
-              >Privacy Policy</a
+              required
             >
-          </label>
-        </div>
-        <button class="modal-button" type="submit">Send</button>
+            </textarea>
+          </div>
+
+          <div class="acception-part">
+            <input
+              class="acception visually-hidden"
+              type="checkbox"
+              name="acception"
+              id="user-accept"
+              value="true"
+              required
+            />
+            <label class="acception-part-label" for="user-accept">
+              <span class="acception-span">
+                <svg class="acception-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-click"></use>
+                </svg> </span
+              >I accept the terms and conditions of the &nbsp;
+              <a class="privacy-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="modal-button" type="submit">Send</button>
+        </form>
       </div>
     </div>
   </body>
